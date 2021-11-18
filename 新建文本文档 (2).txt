@@ -1,0 +1,12 @@
+curl -l -H "Content-type:application/json" -X POST -d '{"desiredCapabilities":{"platformName":"Android","deviceName":"127.0.0.1:7555","platformVerison":"6.0","appPackage":"com.hnr.dxxw","appActivity":".HomeActivity"}}' "http://127.0.0.1:4723/wd/hub/session"
+
+
+
+sudo docker run -d --name mariadb -e MARIADB_ROOT_PASSWORD=mariadb -e MARIADB_USER=bn_testlink -e MARIADB_PASSWORD=bn_testlink -e MARIADB_DATABASE=bitnami_testlink --net testlink -v ${PWD}/mariadb:/bitnami bitnami/mariadb:10.3.22
+
+
+docker run -d -p 80:80 -p 443:443 --name testlink -e TESTLINK_DATABASE_USER=bn_testlink -e TESTLINK_DATABASE_PASSWORD=bn_testlink -e TESTLINK_DATABASE_NAME=bitnami_testlink --net testlink -v C:\Users\wangjia\testlink:/bitnami bitnami/testlink:1.9.20
+
+
+
+wangjia
